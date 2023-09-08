@@ -1,0 +1,6 @@
+import CurrencyService from './currency-service.js';
+
+async function getCurrencyEx(country) {
+  const response = await CurrencyService.currencyExchange(country);
+  
+}

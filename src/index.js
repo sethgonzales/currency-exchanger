@@ -1,4 +1,5 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import css directory here
-// import constructors here
+import './css/styles.css';
+import CurrencyService from './currency-service.js';
+import CurrencyService from './currency-service.js';

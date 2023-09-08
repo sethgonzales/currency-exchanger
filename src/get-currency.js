@@ -1,12 +1,12 @@
 import CurrencyService from './currency-service.js';
+import {printExchange, printError} from './index.js';
 
-export default async function getCurrencyEx(value, country) {
+export default async function getCurrencyEx(USDvalue, country) {
   const response = await CurrencyService.currencyExchange(country);
-  let exchangeValue = value * response.conversion_rates.country;
+  let exchangeValue = (USDvalue * response.conversion_rates.country).toFixed(1);
 
-  
   if (response.conversion_rates) {
     printExchange(exchangeValue);
-  } else  
+  } else
     printError(response);
 }

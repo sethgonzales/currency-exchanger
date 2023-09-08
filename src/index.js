@@ -6,16 +6,24 @@ import getCurrencyEx from './get-currency.js';
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  const USDvalue = document.querySelector('#USDvalue').value;
   const country = document.querySelector('#country').value;
-  const value = document.querySelector('#value').value;
   document.querySelector('#country').value = null;
-  getCurrencyEx(value, country);
+  getCurrencyEx(USDvalue, country);
 }
 
-function printExchange(response) {
-  
+export function printExchange(exchangeValue) {
+  document.querySelector('#showResponse').innerHTML = `<h2> exchange value${exchangeValue} <h2></br>`;
 
 }
+
+function printError(error) {
+  document.querySelector('#showResponse').innerHTML =
+    `<h2>There was an error accessing data. ${error}.</h2>`;
+}
+
+
+
 
 window.addEventListener('load', function () {
   document.querySelector('form').addEventListener('submit', handleFormSubmission);

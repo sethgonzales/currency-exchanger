@@ -6,6 +6,24 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div class="container">
+    <h1>Currency Exchange Calculator</h1>
+    <p>Enter the USD monetary value and the country whose currency you would like to compare it to.</p>
+    <form>
+      <label for="USD-value">Value</label>
+      <input id="USD-value" type="text" name="gif" value="" placeholder="USD value">
+      <label for="country">Country for comparison<label>
+      <select id="country" name="country" class="form-select">
+        <option value="blank"></option>
+        <option value="EUR">European Euro (EUR)</option>
+        <option value="MXN">Mexican Peso (MXN) </option>
+        <option value="BRL">Brazilian Real (BRL)</option>
+        <option value="JPY">Japanese Yen (JPY)</option>
+    </select>
+      <button type="submit" class="btn-success" id="search">Find some gifs!</button>
+    </form>
+    <div id="showResponse"></div></br>
+
+  </div>
 </body>
 </html>

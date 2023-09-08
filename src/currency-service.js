@@ -1,15 +1,16 @@
 export default class CurrencyService {
-  static async currencyExchange(country) {
+  static async currencyExchange() {
     try {
-      const response = await fetch(`https://v6.exchangerate-api.com/v6/${API_KEY}/latest/${country}`);
+      const response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
       const jsonResponse = await response.json();
-      if (response.result === 'success') {
-        return jsonResponse;
+      if (!response.status === 200) {
+        const errorMessage = `${response.status} ${response.statusText}`;
+        throw new Error(errorMessage);
       }
-      const errorMessage = `${response.status} ${response.statusText} ${jsonResponse.error - type}`;
-      throw new Error(errorMessage);
+      return jsonResponse;
     } catch (error) {
       return error;
     }
   }
 }
+

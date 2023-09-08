@@ -6,7 +6,7 @@ export default async function getCurrencyEx(USDvalue, country) {
   try {
     const response = await CurrencyService.currencyExchange();
     const exchangeValue = (USDvalue * response.conversion_rates[country]).toFixed(2);
-    printExchange(exchangeValue);
+    printExchange(USDvalue, country, exchangeValue);
   } catch (error) {
     printError(error.message);
   }

@@ -12,8 +12,8 @@ function handleFormSubmission(event) {
   getCurrencyEx(USDvalue, country);
 }
 
-export function printExchange(exchangeValue) {
-  document.querySelector('#showResponse').innerHTML = `<h2> exchange value${exchangeValue} </h2></br>`;
+export function printExchange(USDvalue, country, exchangeValue) {
+  document.querySelector('#showResponse').innerHTML = `<h2>${USDvalue} USD is worth ${exchangeValue} ${country}</h2></br>`;
 
 }
 

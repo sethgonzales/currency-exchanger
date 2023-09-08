@@ -11,7 +11,7 @@ function handleFormSubmission(event) {
   const inputError = "Error: Invalid Input";
   document.querySelector('#USD-value').value = null;
   document.querySelector('#country').value = null;
-  if (USDvalue === "" || USDvalue < 0 || country === "") {
+  if (USDvalue === "" || USDvalue < 0 || country === "" || country === "undefined") {
     document.querySelector('#showResponse').innerHTML = `<h2>${inputError}</h2>`;
   } else {
     getCurrencyEx(USDvalue, country);

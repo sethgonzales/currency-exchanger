@@ -1,6 +1,6 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### This currency exchanger can determine the value of the US Dollar (USD) in five different currencies.
 
 #### By Seth Gonzales
 
@@ -14,11 +14,12 @@
 
 ## Description
 
+#### This application allows you to convert any USD value into either the European Euro, Mexican Peso, Brazilian Real, Japanese Yen, or Indian Rupee by connecting to the ExchangeRate API. This API keeps up-to-date information on the conversion rates between the USD and these (and many more!) countries.
+
 ## Setup/Installation Requirements
 
-* * Navigate to the __________ repository on [GitHub](https://github.com/sethgonzales/file-name).
-* Clone the repository from GitHub.
-* Create the clone using `$ git clone https://github.com/sethgonzales/file-name` in terminal.
+* * Navigate to the currency-exchanger repository on [GitHub](https://github.com/sethgonzales/currency-exchanger).
+* Clone the repository down using `$ git clone https://github.com/sethgonzales/currency-exchanger.git` in terminal.
 * Open the repository and create a .env file in the root directory.
 * Get API Key from [website] (https:_). If needed, create an account follow the instructions here: [website] (https:_).
 * Add the API Key into the .env file as "API_KEY=_". Double check if it is in the .gitignore.

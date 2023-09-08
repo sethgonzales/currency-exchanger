@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Currency Converter</title>
 </head>
 
 <body>
@@ -16,13 +16,14 @@
     <div id="user-container">
       <form>
       <div class="input-group">
-        <input id="USD-value" type="number" name="USD-value" placeholder="USD value">
+        <input id="USD-value" type="number" name="USD-value" step="0.01" min="0" placeholder="USD value">
           <select id="country" name="country">
             <option value="" disabled selected>Currency to Convert to</option>
             <option value="EUR">European Euro (EUR)</option>
             <option value="MXN">Mexican Peso (MXN) </option>
             <option value="BRL">Brazilian Real (BRL)</option>
             <option value="JPY">Japanese Yen (JPY)</option>
+            <option value="INR">Indian Rupee (INR)</option>
           </select>
           <button type="submit" class="btn btn-primary" id="search">Search</button>
       </div>

@@ -6,9 +6,10 @@ import getCurrencyEx from './get-currency.js';
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const countryInput = document.querySelector('#country').value;
+  const country = document.querySelector('#country').value;
+  const value = document.querySelector('#value').value;
   document.querySelector('#country').value = null;
-  getCurrencyEx(countryInput);
+  getCurrencyEx(value, country);
 }
 
 function printExchange(response) {

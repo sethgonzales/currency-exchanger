@@ -8,6 +8,7 @@ export default async function getCurrencyEx(USDvalue, country) {
     const exchangeValue = (USDvalue * response.conversion_rates[country]).toFixed(2);
     printExchange(USDvalue, country, exchangeValue);
   } catch (error) {
-    printError(error.message);
+    printError(error);
   }
 }
+

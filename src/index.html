@@ -9,26 +9,26 @@
 
 <body>
   <div class="container">
-    <div class="header">
-      <h1>Currency Exchange Calculator</h1>
-      <p>Enter the USD monetary value and the country whose currency you would like to compare it to.</p>
-    </div>
-    <div id="user-container">
-      <form>
+    <h1>Currency Exchange Calculator</h1>
+    <p>Determine the value of the US Dollar (USD) in five different currencies!</p>
+  </div>
+  <div class="container">
+    <form>
       <div class="input-group">
         <input id="USD-value" type="number" name="USD-value" step="0.01" min="0" placeholder="USD value">
-          <select id="country" name="country">
-            <option value="" disabled selected>Currency to Convert to</option>
-            <option value="EUR">European Euro (EUR)</option>
-            <option value="MXN">Mexican Peso (MXN) </option>
-            <option value="BRL">Brazilian Real (BRL)</option>
-            <option value="JPY">Japanese Yen (JPY)</option>
-            <option value="INR">Indian Rupee (INR)</option>
-          </select>
-          <button type="submit" class="btn btn-primary" id="search">Search</button>
+        <select id="country" name="country">
+          <option value="" disabled selected>Convert currency to...</option>
+          <option value="EUR">European Euro (EUR)</option>
+          <option value="MXN">Mexican Peso (MXN) </option>
+          <option value="BRL">Brazilian Real (BRL)</option>
+          <option value="JPY">Japanese Yen (JPY)</option>
+          <option value="INR">Indian Rupee (INR)</option>
+        </select>
+        <button type="submit" class="btn btn-primary" id="search">Search</button>
       </div>
     </form>
-    <div id="showResponse"></div>
+    <div id="showResponse">
+    </div>
   </div>
 </body>
 

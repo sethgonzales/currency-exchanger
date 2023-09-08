@@ -14,26 +14,26 @@
 
 ## Description
 
-#### This application allows you to convert any USD value into either the European Euro, Mexican Peso, Brazilian Real, Japanese Yen, or Indian Rupee by connecting to the ExchangeRate API. This API keeps up-to-date information on the conversion rates between the USD and these (and many more!) countries.
+#### This application allows you to convert any USD value into either the European Euro, Mexican Peso, Brazilian Real, Japanese Yen, or Indian Rupee by connecting to the ExchangeRate API. This API keeps up-to-date information on the conversion rates between the USD and these (and many more!) countries. Enter any USD value and choose one of the five currency options to compare it to! 
 
 ## Setup/Installation Requirements
 
-* * Navigate to the currency-exchanger repository on [GitHub](https://github.com/sethgonzales/currency-exchanger).
-* Clone the repository down using `$ git clone https://github.com/sethgonzales/currency-exchanger.git` in terminal.
-* Open the repository and create a .env file in the root directory.
-* Get API Key from [website] (https:_). If needed, create an account follow the instructions here: [website] (https:_).
-* Add the API Key into the .env file as "API_KEY=_". Double check if it is in the .gitignore.
-* In terminal...
-  * Run `$ npm install` from the root directory to install all packages.
+* Navigate to the currency-exchanger repository on [GitHub](https://github.com/sethgonzales/currency-exchanger).
+* Clone the repository down using `$ git clone https://github.com/sethgonzales/currency-exchanger.git` in your terminal.
+* Open the repository and create a `.env` file in the top level of your directory. 
+  * If `.env` is not already located in your `.gitignore`, please be sure to add it and commit your `.gitignore` before moving on.
+* Get your API Key from [ExchangeRate](https://www.exchangerate-api.com/). If needed, create an account follow the provided [documentation](https://www.exchangerate-api.com/docs/overview) for navigating the API.
+* Add your API Key into the `.env` file as `"API_KEY=Your-API-Key-Goes-Here"`.
+* Follow the next steps in your terminal for the identified npm commands...
+  * Run `$ npm install` from the root directory to install all npm packages.
   * Build the project using webpack with `$ npm run build`.
   * Lint JavaScript files with `$ npm run lint`.
-  * Run tests in Jest with `$ npm run test`.
   * Deploy a development server with `$ npm run start`.
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* Only supports five pre-determined countries.
+* Is not user friendly on mobile screens or tablets.
 
 ## License
 

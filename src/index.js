@@ -8,12 +8,18 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const USDvalue = document.querySelector('#USD-value').value;
   const country = document.querySelector('#country').value;
+  const inputError = "Error: Invalid Input";
   document.querySelector('#USD-value').value = null;
-  getCurrencyEx(USDvalue, country);
+  document.querySelector('#country').value = null;
+  if (USDvalue === "" || USDvalue < 0 || country === "") {
+    document.querySelector('#showResponse').innerHTML = `<h2>${inputError}</h2>`;
+  } else {
+    getCurrencyEx(USDvalue, country);
+  }
 }
 
 export function printExchange(USDvalue, country, exchangeValue) {
-  document.querySelector('#showResponse').innerHTML = `<h2>${USDvalue} USD is worth ${exchangeValue} ${country}</h2></br>`;
+  document.querySelector('#showResponse').innerHTML = `<h2>${USDvalue} USD is worth ${exchangeValue} ${country}</h2>`;
 
 }
 

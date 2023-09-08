@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div class="container">
-    <h1>Currency Exchange Calculator</h1>
-    <p>Enter the USD monetary value and the country whose currency you would like to compare it to.</p>
-    <form>
-      <input id="USD-value" type="number" name="gif" value="" placeholder="USD value">
-      <select id="country" name="country">
-        <option value="" disabled selected>Currency to Convert to</option>
-        <option value="EUR">European Euro (EUR)</option>
-        <option value="MXN">Mexican Peso (MXN) </option>
-        <option value="BRL">Brazilian Real (BRL)</option>
-        <option value="JPY">Japanese Yen (JPY)</option>
-    </select>
-      <button type="submit" class="btn-success" id="search">Convert</button>
+    <div class="header">
+      <h1>Currency Exchange Calculator</h1>
+      <p>Enter the USD monetary value and the country whose currency you would like to compare it to.</p>
+    </div>
+    <div id="user-container">
+      <form>
+      <div class="input-group">
+        <input id="USD-value" type="number" name="USD-value" placeholder="USD value">
+          <select id="country" name="country">
+            <option value="" disabled selected>Currency to Convert to</option>
+            <option value="EUR">European Euro (EUR)</option>
+            <option value="MXN">Mexican Peso (MXN) </option>
+            <option value="BRL">Brazilian Real (BRL)</option>
+            <option value="JPY">Japanese Yen (JPY)</option>
+          </select>
+          <button type="submit" class="btn btn-primary" id="search">Search</button>
+      </div>
     </form>
-    <div id="showResponse"></div></br>
-
+    <div id="showResponse"></div>
   </div>
 </body>
+
 </html>

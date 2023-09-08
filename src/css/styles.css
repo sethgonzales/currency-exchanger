@@ -1,0 +1,42 @@
+body {
+  background-color: rgba(229, 195, 82, 0.569);
+  text-align: center;
+}
+
+.header {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 0.75%;
+  border: solid black;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+#user-container {
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 0.75%;
+  border: solid black;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.input-group {
+  margin: 2%;
+  font-size: 100%;
+}
+
+
+.input-group input {
+  width: 42%;
+}
+
+.input-group select {
+  width: 42%;
+}

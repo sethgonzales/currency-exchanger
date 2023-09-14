@@ -5,12 +5,13 @@ import getCurrencyEx from './get-currency.js';
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  const supportedCountries = ["EUR", "MXN", "BRL", "JPY", "INR"];
   const USDvalue = document.querySelector('#USD-value').value;
   const country = document.querySelector('#country').value;
   const inputError = "Error: Invalid Input";
   document.querySelector('#USD-value').value = null;
   document.querySelector('#country').value = null;
-  if (USDvalue === "" || USDvalue < 0 || country === "" || country === "undefined") {
+  if (USDvalue === "" || USDvalue < 0 || !country || !supportedCountries.includes(country)) {
     document.querySelector('#showResponse').innerHTML = `<h2>${inputError}</h2>`;
   } else {
     getCurrencyEx(USDvalue, country);
